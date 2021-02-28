@@ -1,0 +1,21 @@
+.chat {
+    width: 50%;
+    margin: auto;
+}
+
+.chat-history li {
+    display: flex;
+}
+
+.chat-history .author {
+    width: 20%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+}
+
+.chat-history .text {
+    width: 80%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
