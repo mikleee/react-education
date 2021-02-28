@@ -39,8 +39,8 @@ export class ChatComponent extends React.Component {
     }
 
     render() {
-        const lis = this.state.messages.map(message =>
-            <li>
+        const lis = this.state.messages.map((message, index) =>
+            <li key={index}>
                 <div className="author">{message.author}</div>
                 <div className="text">{message.text}</div>
             </li>
