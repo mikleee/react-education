@@ -1,0 +1,17 @@
+@import "variables";
+
+body {
+  color: $fontColor;
+}
+
+input {
+  height: 28px;
+  box-sizing: border-box;
+  color: $fontColor;
+  border: 1px $borderColor solid;
+
+  &:focus {
+    outline: none;
+    background: $fadeColor;
+  }
+}

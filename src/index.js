@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import {ChatComponent} from './components/main/chat.component';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
+import {ChatComponent} from "./components/chat/chat.component";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ChatComponent />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <ChatComponent/>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

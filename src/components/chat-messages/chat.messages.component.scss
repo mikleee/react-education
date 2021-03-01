@@ -1,0 +1,30 @@
+@import '../../variables';
+
+.chat-messages-history {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px $borderColor solid;
+
+  .message {
+    padding: 3px;
+    background: $fadeColor;
+    border: 1px $borderColor solid;
+    margin-bottom: 2px;
+
+    .author {
+      font-size: 10px;
+      margin-bottom: 1px;
+      font-style: italic;
+    }
+
+    .text {
+
+    }
+  }
+}
+

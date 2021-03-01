@@ -1,0 +1,13 @@
+.chat-message-form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 70%;
+    }
+  }
+}

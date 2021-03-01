@@ -1,8 +1,8 @@
 import {render, screen} from '@testing-library/react';
-import {ChatComponent} from './components/main/chat.component';
+import {ChatMessageFormComponent} from './components/chat-message-form/chat.message.form.component';
 
 test('renders learn react link', () => {
-    render(<ChatComponent/>);
+    render(<ChatMessageFormComponent/>);
     const linkElement = screen.getByText(/learn react/i);
     expect(linkElement).toBeInTheDocument();
 });
