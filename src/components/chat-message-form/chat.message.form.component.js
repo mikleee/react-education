@@ -9,20 +9,31 @@ export class ChatMessageFormComponent extends React.Component {
             message: {author: '', text: ''}
         };
         this.baseState = this.state;
+
+        // need to use short functions in a JRX (otherwise need to use arrow functions)
         this.handleFormInputChange = this.handleFormInputChange.bind(this);
         this.submitMessage = this.submitMessage.bind(this);
     }
 
     handleFormInputChange(event) {
         const target = event.target;
-        const message = {...this.state.message, [target.name]: target.value};
+
+        // retrieve input name and value
+        let name = target.name;
+        let value = target.value;
+
+        // copy message from state
+        const message = {...this.state.message};
+        // set new value to message
+        message[name] = value;
+
+        // update react component state
         this.setState({
             message: message
         });
     }
 
     submitMessage(event) {
-        debugger;
         event.preventDefault();
         const message = this.state.message;
         this.props.onMessageSubmit(message);
@@ -32,6 +43,17 @@ export class ChatMessageFormComponent extends React.Component {
     render() {
         return (
             <form onSubmit={this.submitMessage} className="chat-message-form">
+                <div>
+                    <label>
+                        <span>Author</span>
+                        <span>{this.state.message.author}</span>
+                    </label>
+                    <label>
+                        <span>Text</span>
+                        <span>{this.state.message.text}</span>
+                    </label>
+                </div>
+                <br/>
                 <label>
                     <span>Author</span>
                     <input type="text" name="author" value={this.state.message.author} onChange={this.handleFormInputChange}/>
@@ -44,4 +66,5 @@ export class ChatMessageFormComponent extends React.Component {
             </form>
         );
     }
+
 }
