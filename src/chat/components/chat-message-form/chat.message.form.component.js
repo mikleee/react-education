@@ -1,5 +1,7 @@
 import React from 'react';
 import './chat.message.form.component.scss';
+import {store} from "../../../store/store";
+import {sendMessageAction} from "../../chat.actions";
 
 
 export class ChatMessageFormComponent extends React.Component {
@@ -22,10 +24,8 @@ export class ChatMessageFormComponent extends React.Component {
     }
 
     submitMessage(event) {
-        debugger;
         event.preventDefault();
-        const message = this.state.message;
-        this.props.onMessageSubmit(message);
+        store.dispatch(sendMessageAction(this.state.message));
         this.setState(this.baseState);
     }
 

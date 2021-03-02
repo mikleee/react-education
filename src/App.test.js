@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import {ChatMessageFormComponent} from './components/chat-message-form/chat.message.form.component';
+import {ChatMessageFormComponent} from './chat/components/chat-message-form/chat.message.form.component';
 
 test('renders learn react link', () => {
     render(<ChatMessageFormComponent/>);

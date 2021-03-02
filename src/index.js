@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import {ChatComponent} from "./components/chat/chat.component";
+import {ChatComponent} from "./chat/components/chat/chat.component";
 
 ReactDOM.render(
     <React.StrictMode>
